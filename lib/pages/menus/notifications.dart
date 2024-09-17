@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:getx_apps/widgets/text_getx.dart';
 
 class Notifications extends StatelessWidget {
   const Notifications({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: Container(
-          margin: const EdgeInsets.all(0),
-          child: const Text('ini halaman Notifications'),
-        ),
+        child: TextGetx(text: 'ini halaman notification'),
       ),
     );
   }
