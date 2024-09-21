@@ -5,6 +5,7 @@ import 'package:getx_apps/pages/menus/explore.dart';
 import 'package:getx_apps/pages/menus/home.dart';
 import 'package:getx_apps/pages/menus/notifications.dart';
 import 'package:getx_apps/pages/menus/profile.dart';
+import 'package:getx_apps/widgets/bottom_nav_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,22 +21,14 @@ class HomePage extends StatelessWidget {
       const Notifications(),
       const Profile()
     ];
+
     return Obx(() {
       return Scaffold(
+        backgroundColor: Colors.white,
         body: menus[bottomNavController.selectedIndex.value],
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: MyBottomNavBar(
           currentIndex: bottomNavController.selectedIndex.value,
           onTap: bottomNavController.changeIndexMenu,
-          selectedItemColor: Colors.blue,
-          unselectedItemColor: Colors.grey,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.map_rounded), label: 'Explore'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.notifications), label: 'Notification'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
-          ],
         ),
       );
     });

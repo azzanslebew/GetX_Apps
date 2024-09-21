@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_apps/widgets/text_getx.dart';
+import 'package:getx_apps/widgets/text.dart';
 
 class Explore extends StatelessWidget {
   const Explore({super.key});
@@ -7,8 +7,9 @@ class Explore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: TextGetx(text: 'ini halaman explore'),
+        child: MyText(text: 'ini halaman explore'),
       ),
     );
   }
