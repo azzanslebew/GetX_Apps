@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_apps/controller/category_controller.dart';
-import 'package:getx_apps/widgets/Home/product_card.dart';
-import 'package:getx_apps/widgets/Home/scroll_category_buttons.dart';
-import 'package:getx_apps/widgets/Home/search_filter_bar.dart';
+import 'package:getx_apps/widgets/home/product_card.dart';
+import 'package:getx_apps/widgets/home/scroll_category_buttons.dart';
+import 'package:getx_apps/widgets/home/search_filter_bar.dart';
 import 'package:getx_apps/widgets/appbar.dart';
 
 class Home extends StatelessWidget {

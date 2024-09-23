@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_apps/widgets/Home/category_button.dart';
+import 'package:getx_apps/widgets/home/category_button.dart';
 
 class ScrollCategoryButtons extends StatelessWidget {
   final List<String> categories;

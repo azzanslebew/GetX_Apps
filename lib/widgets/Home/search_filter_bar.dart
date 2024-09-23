@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:getx_apps/widgets/Home/filter_button.dart';
-import 'package:getx_apps/widgets/Home/search_bar.dart';
+import 'package:getx_apps/widgets/home/filter_button.dart';
+import 'package:getx_apps/widgets/home/search_bar.dart';
 
 class SearchFilterBar extends StatelessWidget {
   const SearchFilterBar({super.key});
