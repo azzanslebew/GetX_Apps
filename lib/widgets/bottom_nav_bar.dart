@@ -10,47 +10,34 @@ class MyBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 8,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: BottomNavigationBar(
-          selectedLabelStyle: GoogleFonts.robotoFlex(),
-          currentIndex: currentIndex,
-          onTap: onTap,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined),
-                activeIcon: Icon(Icons.home),
-                label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.map_outlined),
-                activeIcon: Icon(Icons.map),
-                label: 'Explore'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.notifications_outlined),
-                activeIcon: Icon(Icons.notifications),
-                label: 'Notification'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline),
-                activeIcon: Icon(Icons.person),
-                label: 'Profile'),
-          ],
-        ),
-      ),
+    return BottomNavigationBar(
+      selectedLabelStyle: GoogleFonts.robotoFlex(),
+      currentIndex: currentIndex,
+      onTap: onTap,
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Colors.grey,
+      items: const [
+        BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
+            label: 'Home'),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.map_outlined),
+            activeIcon: Icon(Icons.map),
+            label: 'Explore'),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.notifications_outlined),
+            activeIcon: Icon(Icons.notifications),
+            label: 'Notification'),
+        BottomNavigationBarItem(
+            backgroundColor: Colors.white,
+            icon: Icon(Icons.person_outline),
+            activeIcon: Icon(Icons.person),
+            label: 'Profile'),
+      ],
     );
   }
 }

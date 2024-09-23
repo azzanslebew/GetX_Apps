@@ -54,7 +54,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -64,6 +63,56 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/exampleshoes.jpg
+
+    #Shirts image
+    - assets/images/shirts/bentayan_flannel.jpg
+    - assets/images/shirts/ethno_shirt_ls.jpg
+    - assets/images/shirts/poza_rica_flannel_shirt.jpg
+    - assets/images/shirts/rawson_ss_shirt.jpg
+    - assets/images/shirts/rivendell_shirt.jpg
+    - assets/images/shirts/towsend_f1.jpg
+
+    #Pants image
+    - assets/images/pants/alto_hike_pants.jpg
+    - assets/images/pants/attack_trainer_pants.jpg
+    - assets/images/pants/ws_brawler_pants.jpg
+    - assets/images/pants/ws_kalla_jegging.jpg
+    - assets/images/pants/x-stormseeker_pants.jpg
+    - assets/images/pants/x-trekfaster_1.0_pants.jpg
+
+    #Shoes image
+    - assets/images/shoes/ares.jpg
+    - assets/images/shoes/ferret.jpg
+    - assets/images/shoes/jr_finland_pre_school.jpg
+    - assets/images/shoes/salvage_slip_on.jpg
+    - assets/images/shoes/tigerclaw_2.5.jpg
+    - assets/images/shoes/z-ras_dashen.jpg
+
+    #Accessories image
+    - assets/images/accessories/geval_phonecase_1.0.jpg
+    - assets/images/accessories/odospeed_anachrono.jpg
+    - assets/images/accessories/pandoera_bracelet.jpg
+    - assets/images/accessories/raintour_s-g.jpg
+    - assets/images/accessories/velox_tac.jpg
+    - assets/images/accessories/ws_sweven_card_wallet.jpg
+
+    #Bags image
+    - assets/images/bags/borderpass_wheel_pack.jpg
+    - assets/images/bags/forlough_15l.jpg
+    - assets/images/bags/strato_50_hauler_bag.jpg
+    - assets/images/bags/striker.jpg
+    - assets/images/bags/ws_spacious_waist_bag_1a.jpg
+    - assets/images/bags/z-rookie_tunnel_bag.jpg
+
+    #Jackets image
+    - assets/images/jackets/alpinist_warmer_jacket.jpg
+    - assets/images/jackets/attack_bdu_jacket.jpg
+    - assets/images/jackets/ms_equator_windproof_jkt_f1.jpg
+    - assets/images/jackets/raintour_jacket_hoodie.jpg
+    - assets/images/jackets/vigorous_convertible_jacket.jpg
+    - assets/images/jackets/x-hasten_insulated_jacket.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
