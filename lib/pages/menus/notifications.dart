@@ -9,7 +9,7 @@ class Notifications extends StatelessWidget {
     return const Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: MyText(text: 'ini halaman notification'),
+        child: MyText(text: 'ini halaman notification', textStyle: TextStyle(),),
       ),
     );
   }

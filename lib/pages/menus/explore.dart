@@ -9,7 +9,7 @@ class Explore extends StatelessWidget {
     return const Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: MyText(text: 'ini halaman explore'),
+        child: MyText(text: 'ini halaman explore', textStyle: TextStyle(),),
       ),
     );
   }

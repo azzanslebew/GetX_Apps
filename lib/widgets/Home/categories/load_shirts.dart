@@ -8,33 +8,33 @@ final shirts = <Map<String, String>>[
     'category': 'Shirts'
   },
   {
-    'image': 'assets/images/pants/ws_brawler_pants.jpg',
-    'title': 'WS BRAWLER PANTS',
-    'price': 'Rp. 749.000',
-    'category': 'Pants'
+    'image': 'assets/images/shirts/ethno_shirt_ls.jpg',
+    'title': 'ETHNO SHIRT LS',
+    'price': 'Rp. 419.000',
+    'category': 'Shirts'
   },
   {
-    'image': 'assets/images/accessories/odospeed_anachrono.jpg',
-    'title': 'ODOSPEED ANACHRONO',
-    'price': 'Rp. 1.149.000',
-    'category': 'Accessories'
+    'image': 'assets/images/shirts/poza_rica_flannel_shirt.jpg',
+    'title': 'POZA RICA FLANNEL SHIRT',
+    'price': 'Rp. 399.000',
+    'category': 'Shirts'
   },
   {
-    'image': 'assets/images/shoes/ares.jpg',
-    'title': 'ARES',
-    'price': 'Rp. 979.000',
-    'category': 'Shoes'
+    'image': 'assets/images/shirts/rawson_ss_shirt.jpg',
+    'title': 'RAWSON SS SHIRT',
+    'price': 'Rp. 319.000',
+    'category': 'Shirts'
   },
   {
-    'image': 'assets/images/bags/strato_50_hauler_bag.jpg',
-    'title': 'STRATO 50 HAULER BAG',
-    'price': 'Rp. 789.000',
-    'category': 'Bags'
+    'image': 'assets/images/shirts/rivendell_shirt.jpg',
+    'title': 'RIVENDELL SHIRT',
+    'price': 'Rp. 349.000',
+    'category': 'Shirts'
   },
   {
-    'image': 'assets/images/jackets/raintour_jacket_hoodie.jpg',
-    'title': 'RAINTOUR JACKET HOODIE',
-    'price': 'Rp. 749.000',
-    'category': 'Jackets'
+    'image': 'assets/images/shirts/towsend_f1.jpg',
+    'title': 'TOWSEND F1',
+    'price': 'Rp. 399.000',
+    'category': 'Shirts'
   },
 ].obs;

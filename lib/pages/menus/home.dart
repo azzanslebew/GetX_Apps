@@ -14,7 +14,10 @@ class Home extends StatelessWidget {
     final CategoryController categoryController = Get.put(CategoryController());
 
     return Scaffold(
-      appBar: const MyAppBar(title: 'Discover'),
+      appBar: const MyAppBar(
+        title: 'Discover',
+        fontSize: 30,
+      ),
       body: Container(
         color: Colors.white,
         child: SingleChildScrollView(

@@ -3,8 +3,15 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final bool showCartIcon;
+  final double fontSize;
 
-  const MyAppBar({super.key, required this.title});
+  const MyAppBar({
+    super.key,
+    required this.title,
+    this.showCartIcon = true,
+    required this.fontSize,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,17 +24,19 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           Text(
             title,
             style: GoogleFonts.poppins(
-              color: Colors.black,
-              fontSize: 30,
+              fontSize: fontSize,
               fontWeight: FontWeight.bold,
+              color: Colors.black,
             ),
           ),
-          IconButton(
+          if (showCartIcon)
+            IconButton(
               onPressed: () {},
               icon: const Icon(
                 Icons.shopping_cart,
                 color: Colors.black,
-              )),
+              ),
+            ),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_apps/controller/category_controller.dart';
+import 'package:getx_apps/widgets/elevated_button.dart';
 
 class CategoryButton extends StatelessWidget {
   final String category;
@@ -14,24 +15,16 @@ class CategoryButton extends StatelessWidget {
       bool isSelected = controller.selectedCategory.value == category;
       return Container(
         padding: const EdgeInsets.only(right: 8),
-        child: ElevatedButton(
+        child: MyButton(
           onPressed: () {
             controller.selectCategory(category);
           },
-          style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-              side: BorderSide(
-                style: BorderStyle.solid,
-                color:
-                    isSelected ? Colors.transparent : const Color(0xffE6E6E6),
-              ),
-            ),
-            backgroundColor: isSelected ? Colors.black : Colors.white,
-            foregroundColor: isSelected ? Colors.white : Colors.black,
-            elevation: 0,
-          ),
-          child: Text(category),
+          borderRadius: 10,
+          elevation: 0,
+          backgroundColor: isSelected ? Colors.black : Colors.white,
+          textColor: isSelected ? Colors.white : Colors.black,
+          category: category,
+          isSelected: isSelected, 
         ),
       );
     });

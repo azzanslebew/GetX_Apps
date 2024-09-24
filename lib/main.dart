@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get.dart';
 import 'package:getx_apps/pages/home_page.dart';
+import 'package:getx_apps/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,8 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       getPages: [
+        GetPage(name: '/', page: () => const LoginPage()),
         GetPage(
-          name: '/',
+          name: '/home',
           page: () => const HomePage(),
         ),
       ],
