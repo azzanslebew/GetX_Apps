@@ -5,7 +5,7 @@ import 'package:getx_apps/widgets/elevated_button.dart';
 
 class CategoryButton extends StatelessWidget {
   final String category;
-  final CategoryController controller = Get.put(CategoryController());
+  final CategoryController controller = Get.find();
 
   CategoryButton(this.category, {super.key});
 
