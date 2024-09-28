@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyTextField extends StatelessWidget {
   final String label;
@@ -8,6 +9,8 @@ class MyTextField extends StatelessWidget {
   final IconData? icon;
   final VoidCallback? onIconPressed;
   final Function(String)? onChanged;
+  final TextStyle? hintStyle;
+  final TextStyle? labelStyle;
 
   const MyTextField({
     super.key,
@@ -18,6 +21,8 @@ class MyTextField extends StatelessWidget {
     this.icon,
     this.onIconPressed,
     this.onChanged,
+    this.hintStyle,
+    this.labelStyle,
   });
 
   @override
@@ -27,14 +32,24 @@ class MyTextField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          style: labelStyle ??
+              GoogleFonts.montserrat(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
         ),
         const SizedBox(height: 8),
         TextField(
+          cursorColor: Colors.black,
           obscureText: isPassword && !isPasswordVisible,
           onChanged: onChanged,
           decoration: InputDecoration(
             hintText: hintText,
+            hintStyle: hintStyle ??
+                GoogleFonts.montserrat(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14),
             suffixIcon: isPassword
                 ? IconButton(
                     icon: Icon(
@@ -47,6 +62,18 @@ class MyTextField extends StatelessWidget {
                 : null,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
+              borderSide:
+                  const BorderSide(color: Color(0xffE6E6E6), width: 1.5),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide:
+                  const BorderSide(color: Color(0xffE6E6E6), width: 1.5),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+              borderSide:
+                  const BorderSide(color: Color(0xffE6E6E6), width: 1.5),
             ),
           ),
         ),

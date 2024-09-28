@@ -18,11 +18,14 @@ class MySearchBar extends StatelessWidget {
           const SizedBox(width: 8),
           Expanded(
             child: TextField(
+              cursorColor: Colors.black,
               decoration: InputDecoration(
                 hintText: 'Search for clothes...',
                 border: InputBorder.none,
                 hintStyle: TextStyle(
-                    color: Colors.grey.shade400, fontWeight: FontWeight.w400),
+                    color: Colors.grey.shade400,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14),
               ),
             ),
           ),

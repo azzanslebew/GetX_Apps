@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CategoryController categoryController = Get.put(CategoryController());
+    final CategoryController categoryController = Get.find();
 
     return Scaffold(
       appBar: const MyAppBar(

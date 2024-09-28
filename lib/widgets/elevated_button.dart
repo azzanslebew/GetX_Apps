@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -10,6 +11,8 @@ class MyButton extends StatelessWidget {
   final bool isSelected;
   final bool showIcon;
   final IconData? icon;
+  final Widget? iconWidget;
+  final bool showBorder;
 
   const MyButton({
     super.key,
@@ -22,25 +25,34 @@ class MyButton extends StatelessWidget {
     this.isSelected = false,
     this.showIcon = false,
     this.icon,
+    this.iconWidget,
+    this.showBorder = true,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(right: 8),
+    return SizedBox(
       child: ElevatedButton.icon(
         onPressed: onPressed,
-        icon: showIcon && icon != null
-            ? Icon(icon, color: textColor)
-            : Container(),
-        label: Text(category),
+        icon: showIcon
+            ? iconWidget ??
+                (icon != null ? Icon(icon, color: textColor) : const SizedBox())
+            : const SizedBox(),
+        label: Text(
+          category,
+          style: GoogleFonts.montserrat(
+              color: isSelected ? Colors.white : textColor),
+        ),
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
-            side: BorderSide(
-              style: BorderStyle.solid,
-              color: isSelected ? Colors.transparent : const Color(0xffE6E6E6),
-            ),
+            side: showBorder
+                ? BorderSide(
+                    color: isSelected
+                        ? Colors.transparent
+                        : const Color(0xffE6E6E6),
+                  )
+                : BorderSide.none,
           ),
           backgroundColor: isSelected ? Colors.black : backgroundColor,
           foregroundColor: isSelected ? Colors.white : textColor,

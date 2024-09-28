@@ -5,12 +5,12 @@ import 'package:getx_apps/widgets/elevated_button.dart';
 
 class CategoryButton extends StatelessWidget {
   final String category;
-  final CategoryController controller = Get.find();
 
-  CategoryButton(this.category, {super.key});
+  const CategoryButton(this.category, {super.key});
 
   @override
   Widget build(BuildContext context) {
+    final CategoryController controller = Get.find();
     return Obx(() {
       bool isSelected = controller.selectedCategory.value == category;
       return Container(
@@ -24,7 +24,7 @@ class CategoryButton extends StatelessWidget {
           backgroundColor: isSelected ? Colors.black : Colors.white,
           textColor: isSelected ? Colors.white : Colors.black,
           category: category,
-          isSelected: isSelected, 
+          isSelected: isSelected,
         ),
       );
     });

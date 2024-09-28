@@ -65,6 +65,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
 
+    - assets/images/google_icon.png
+
     #Shirts image
     - assets/images/shirts/bentayan_flannel.jpg
     - assets/images/shirts/ethno_shirt_ls.jpg
