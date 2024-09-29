@@ -34,9 +34,9 @@ class MyBottomNavBar extends StatelessWidget {
             label: 'Notification'),
         BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: Icon(Icons.person_outline),
-            activeIcon: Icon(Icons.person),
-            label: 'Profile'),
+            icon: Icon(Icons.account_circle_outlined),
+            activeIcon: Icon(Icons.account_circle),
+            label: 'Account'),
       ],
     );
   }

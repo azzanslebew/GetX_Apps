@@ -4,7 +4,7 @@ import 'package:getx_apps/controller/bottom_nav_controller.dart';
 import 'package:getx_apps/pages/menus/explore.dart';
 import 'package:getx_apps/pages/menus/home.dart';
 import 'package:getx_apps/pages/menus/notifications.dart';
-import 'package:getx_apps/pages/menus/profile.dart';
+import 'package:getx_apps/pages/menus/account.dart';
 import 'package:getx_apps/widgets/bottom_nav_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
       const Home(),
       const Explore(),
       const Notifications(),
-      const Profile()
+      const Account()
     ];
 
     return Obx(() {

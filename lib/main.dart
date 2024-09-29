@@ -15,14 +15,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialBinding: MyBindings(),
       initialRoute: '/',
       getPages: [
-        GetPage(
-            name: '/', page: () => const LoginPage(), binding: MyBindings()),
+        GetPage(name: '/', page: () => const LoginPage()),
         GetPage(
           name: '/home',
           page: () => const HomePage(),
-          binding: MyBindings(),
         ),
       ],
     );
