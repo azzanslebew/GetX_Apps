@@ -66,6 +66,13 @@ flutter:
   assets:
 
     - assets/images/google_icon.png
+    - assets/images/eiger1.jpg
+    - assets/images/eiger2.jpg
+    - assets/images/eiger3.jpg
+    - assets/images/eiger4.jpg
+    - assets/images/eiger5.jpg
+    - assets/images/eiger6.jpg
+    - assets/images/eiger7.jpg
 
     #Shirts image
     - assets/images/shirts/bentayan_flannel.jpg

@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: '/', page: () => const LoginPage()),
         GetPage(
-          name: '/home',
-          page: () => const HomePage(),
-        ),
+            name: '/home', page: () => const HomePage(), binding: MyBindings()),
       ],
     );
   }
