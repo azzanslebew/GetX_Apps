@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx_apps/widgets/appbar.dart';
-import 'package:getx_apps/widgets/text.dart';
+import 'package:getx_apps/widgets/list_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Account extends StatelessWidget {
@@ -16,65 +16,54 @@ class Account extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          ListTile(
-            leading: const Icon(
-              Icons.inventory_2_outlined,
-              size: 24,
-            ),
-            title: MyText(
-                text: 'My Orders',
-                textStyle: GoogleFonts.montserrat(fontSize: 16)),
+          MyListTile(
+            leading: const Icon(Icons.inventory_2_outlined, size: 24),
+            title: 'My Orders',
             trailing: const Icon(Icons.arrow_forward_ios,
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
-          ListTile(
+          MyListTile(
             leading: const Icon(Icons.person_outline, size: 24),
-            title:
-                MyText(text: 'My Details', textStyle: GoogleFonts.montserrat()),
+            title: 'My Details',
             trailing: const Icon(Icons.arrow_forward_ios,
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
-          ListTile(
+          MyListTile(
             leading: const Icon(Icons.home_work_outlined, size: 24),
-            title: MyText(
-                text: 'Address Book', textStyle: GoogleFonts.montserrat()),
+            title: 'Address Book',
             trailing: const Icon(Icons.arrow_forward_ios,
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
-          ListTile(
+          MyListTile(
             leading: const Icon(Icons.payment_outlined, size: 24),
-            title: MyText(
-                text: 'Payment Methods', textStyle: GoogleFonts.montserrat()),
+            title: 'Payment Methods',
             trailing: const Icon(Icons.arrow_forward_ios,
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
           const Divider(),
-          ListTile(
+          MyListTile(
             leading: const Icon(Icons.help_outline, size: 24),
-            title: MyText(text: 'FAQs', textStyle: GoogleFonts.montserrat()),
+            title: 'FAQs',
             trailing: const Icon(Icons.arrow_forward_ios,
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
-          ListTile(
+          MyListTile(
             leading: const Icon(Icons.headset_mic_outlined, size: 24),
-            title: MyText(
-                text: 'Help Center', textStyle: GoogleFonts.montserrat()),
+            title: 'Help Center',
             trailing: const Icon(Icons.arrow_forward_ios,
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
           const Divider(),
-          ListTile(
+          MyListTile(
             leading: const Icon(Icons.logout, color: Colors.red),
-            title: MyText(
-              text: 'Logout',
-              textStyle: GoogleFonts.montserrat(color: Colors.red),
-            ),
+            title: 'Logout',
+            titleStyle: GoogleFonts.montserrat(color: Colors.red),
             onTap: () {},
           ),
         ],

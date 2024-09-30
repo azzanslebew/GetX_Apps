@@ -10,5 +10,4 @@ class MyBindings extends Bindings {
     Get.lazyPut(() => CategoryController());
     Get.lazyPut(() => LoginController());
   }
-
 }
