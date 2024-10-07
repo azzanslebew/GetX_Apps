@@ -10,8 +10,7 @@ class LoginController extends GetxController {
   }
 
   void login() {
-    if (email.value == 'azzanisham@gmail.com' &&
-        password.value == 'azzanisham123') {
+    if (email.value == 'azzan@gmail.com' && password.value == 'azzan123') {
       Get.snackbar('Success', 'Login successful');
       Get.offNamed('/home');
     } else {

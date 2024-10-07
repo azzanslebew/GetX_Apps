@@ -34,14 +34,23 @@ class MyButton extends StatelessWidget {
     return SizedBox(
       child: ElevatedButton.icon(
         onPressed: onPressed,
-        icon: showIcon
-            ? iconWidget ??
-                (icon != null ? Icon(icon, color: textColor) : const SizedBox())
-            : const SizedBox(),
-        label: Text(
-          category,
-          style: GoogleFonts.montserrat(
-              color: isSelected ? Colors.white : textColor),
+        label: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              category,
+              style: GoogleFonts.montserrat(
+                  color: isSelected ? Colors.white : textColor),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            if (showIcon)
+              iconWidget ??
+                  (icon != null
+                      ? Icon(icon, color: textColor)
+                      : const SizedBox()),
+          ],
         ),
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(

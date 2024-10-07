@@ -65,6 +65,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
 
+    - assets/images/eiger_logo.png
     - assets/images/google_icon.png
     - assets/images/eiger1.jpg
     - assets/images/eiger2.jpg
