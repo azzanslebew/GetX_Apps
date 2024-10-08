@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 
 class ExploreController extends GetxController {
   var imageItems = <Map<String, String>>[
-        {
+    {
       'imagePath': 'assets/images/eiger1.jpg',
     },
     {
@@ -24,5 +24,4 @@ class ExploreController extends GetxController {
       'imagePath': 'assets/images/eiger7.jpg',
     },
   ].obs;
-  
 }

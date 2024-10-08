@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_apps/controller/cart_controller.dart';
+import 'package:getx_apps/models/cart_model.dart'; // Import CartModel
+import 'package:getx_apps/widgets/elevated_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProductCard extends StatelessWidget {
@@ -70,30 +74,27 @@ class ProductCard extends StatelessWidget {
           ),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.shopping_cart,
-                        size: 16, color: Colors.white),
-                    const SizedBox(width: 5),
-                    Text(
-                      'Add to Cart',
-                      style: GoogleFonts.poppins(
-                          color: Colors.white, fontSize: 12),
-                    ),
-                  ],
-                ),
+              child: MyButton(
+                onPressed: () {
+                  final CartController cartController = Get.put(CartController());
+                  CartModel cartItem = CartModel(
+                    title: title,
+                    imageUrl: imageUrl,
+                    price: price,
+                  );
+                  cartController.addToCart(cartItem);
+                  Get.snackbar('Item Added', '$title has been added to cart.');
+                },
+                backgroundColor: Colors.black,
+                category: 'Add to Cart',
+                showIcon: true,
+                isIconLeft: true,
+                iconSize: 16,
+                icon: Icons.shopping_cart,
+                textColor: Colors.white,
               ),
             ),
           ),

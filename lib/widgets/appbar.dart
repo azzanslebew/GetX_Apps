@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -31,7 +32,9 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           if (showCartIcon)
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed('/cart');
+              },
               icon: const Icon(
                 Icons.shopping_cart,
                 color: Colors.black,

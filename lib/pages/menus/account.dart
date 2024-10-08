@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx_apps/widgets/appbar.dart';
+import 'package:getx_apps/widgets/divider.dart';
 import 'package:getx_apps/widgets/list_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -44,7 +46,10 @@ class Account extends StatelessWidget {
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
-          const Divider(),
+          const MyDivider(
+            isThick: false,
+            isColored: false,
+          ),
           MyListTile(
             leading: const Icon(Icons.help_outline, size: 24),
             title: 'FAQs',
@@ -59,12 +64,17 @@ class Account extends StatelessWidget {
                 size: 20, color: Color(0xffB3B3B3)),
             onTap: () {},
           ),
-          const Divider(),
+          const MyDivider(
+            isThick: false,
+            isColored: false,
+          ),
           MyListTile(
             leading: const Icon(Icons.logout, color: Colors.red),
             title: 'Logout',
             titleStyle: GoogleFonts.montserrat(color: Colors.red),
-            onTap: () {},
+            onTap: () {
+              Get.offAllNamed('/login');
+            },
           ),
         ],
       ),

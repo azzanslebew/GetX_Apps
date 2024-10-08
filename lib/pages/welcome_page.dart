@@ -33,6 +33,7 @@ class WelcomePage extends StatelessWidget {
               showBorder: false,
               showIcon: true,
               icon: Icons.arrow_forward_rounded,
+              useSizedBox: true,
             )
           ],
         ),

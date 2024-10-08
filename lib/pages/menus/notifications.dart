@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx_apps/widgets/appbar.dart';
+import 'package:getx_apps/widgets/divider.dart';
 import 'package:getx_apps/widgets/list_tile.dart';
 import 'package:getx_apps/widgets/text.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,7 +34,10 @@ class Notifications extends StatelessWidget {
             subtitle: 'Special promotion only valid today.',
             onTap: () {},
           ),
-          const Divider(),
+          const MyDivider(
+            isThick: false,
+            isColored: false,
+          ),
           const SizedBox(height: 8),
           MyText(
             text: 'Yesterday',
@@ -50,14 +54,20 @@ class Notifications extends StatelessWidget {
             subtitle: 'You have top up your e-wallet.',
             onTap: () {},
           ),
-          const Divider(),
+          const MyDivider(
+            isThick: false,
+            isColored: false,
+          ),
           MyListTile(
             leading: const Icon(Icons.location_on_outlined, size: 24),
             title: 'New Service Available!',
             subtitle: 'Now you can track order in real-time.',
             onTap: () {},
           ),
-          const Divider(),
+          const MyDivider(
+            isThick: false,
+            isColored: false,
+          ),
           const SizedBox(height: 8),
           MyText(
             text: 'August 26, 2024',
@@ -73,7 +83,10 @@ class Notifications extends StatelessWidget {
             subtitle: 'Credit card has been linked.',
             onTap: () {},
           ),
-          const Divider(),
+          const MyDivider(
+            isThick: false,
+            isColored: false,
+          ),
           MyListTile(
             leading: const Icon(Icons.account_circle_outlined, size: 24),
             title: 'Account Setup Successfully!',

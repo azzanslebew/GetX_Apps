@@ -13,6 +13,9 @@ class MyButton extends StatelessWidget {
   final IconData? icon;
   final Widget? iconWidget;
   final bool showBorder;
+  final bool useSizedBox;
+  final bool isIconLeft;
+  final double iconSize;
 
   const MyButton({
     super.key,
@@ -27,31 +30,16 @@ class MyButton extends StatelessWidget {
     this.icon,
     this.iconWidget,
     this.showBorder = true,
+    this.useSizedBox = false,
+    this.isIconLeft = false,
+    this.iconSize = 24.0,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: ElevatedButton.icon(
+      child: ElevatedButton(
         onPressed: onPressed,
-        label: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              category,
-              style: GoogleFonts.montserrat(
-                  color: isSelected ? Colors.white : textColor),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            if (showIcon)
-              iconWidget ??
-                  (icon != null
-                      ? Icon(icon, color: textColor)
-                      : const SizedBox()),
-          ],
-        ),
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
@@ -66,6 +54,30 @@ class MyButton extends StatelessWidget {
           backgroundColor: isSelected ? Colors.black : backgroundColor,
           foregroundColor: isSelected ? Colors.white : textColor,
           elevation: elevation,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (isIconLeft && showIcon)
+              iconWidget ??
+                  (icon != null
+                      ? Icon(icon, size: iconSize, color: textColor)
+                      : const SizedBox()),
+            Text(
+              category,
+              style: GoogleFonts.montserrat(
+                  color: isSelected ? Colors.white : textColor),
+            ),
+            if (useSizedBox)
+              const SizedBox(
+                width: 10,
+              ),
+            if (!isIconLeft && showIcon)
+              iconWidget ??
+                  (icon != null
+                      ? Icon(icon, size: iconSize, color: textColor)
+                      : const SizedBox()),
+          ],
         ),
       ),
     );

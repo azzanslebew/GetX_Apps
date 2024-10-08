@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import '../models/cart_model.dart'; // Import your CartModel
 import '../widgets/home/categories/load_shirts.dart';
 import '../widgets/home/categories/load_pants.dart';
 import '../widgets/home/categories/load_shoes.dart';
@@ -9,6 +10,7 @@ import '../widgets/home/categories/load_jackets.dart';
 class CategoryController extends GetxController {
   var selectedCategory = 'All'.obs;
   var products = <Map<String, String>>[].obs;
+  var cartItems = <CartModel>[].obs; 
 
   @override
   void onInit() {
@@ -51,5 +53,9 @@ class CategoryController extends GetxController {
       ...bags,
       ...jackets,
     ];
+  }
+
+  void addToCart(CartModel product) { 
+    cartItems.add(product);
   }
 }
