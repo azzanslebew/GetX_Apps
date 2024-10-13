@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_apps/widgets/appbar.dart';
 import 'package:getx_apps/widgets/divider.dart';
 import 'package:getx_apps/widgets/list_tile.dart';
+import 'package:getx_apps/widgets/confirmation_dialog.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Account extends StatelessWidget {
@@ -73,7 +74,19 @@ class Account extends StatelessWidget {
             title: 'Logout',
             titleStyle: GoogleFonts.montserrat(color: Colors.red),
             onTap: () {
-              Get.offAllNamed('/login');
+              ConfirmationDialog.show(
+              icon: Icons.error_outline_rounded, 
+              title: "Logout?",
+              message: "Are you sure you want to logout?",
+              confirmText: "Yes, Logout",
+              cancelText: "No, Cancel",
+              onConfirm: () {
+                Get.offAllNamed('/login');
+              },
+              onCancel: () {
+                Get.back();
+              },
+            );
             },
           ),
         ],

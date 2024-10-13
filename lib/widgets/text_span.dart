@@ -22,14 +22,14 @@ class MyTextSpan extends StatelessWidget {
           TextSpan(
             text: normalText,
             style: GoogleFonts.montserrat(
-              fontSize: 11,
+              fontSize: 13,
               color: Colors.black,
             ),
           ),
           TextSpan(
             text: highlightedText,
             style: GoogleFonts.montserrat(
-              fontSize: 11,
+              fontSize: 13,
               fontWeight: FontWeight.w600,
               color: Colors.black,
               decoration: TextDecoration.underline,

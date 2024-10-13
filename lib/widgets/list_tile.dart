@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyListTile extends StatelessWidget {
-  final Icon leading;
+  final Widget leading;
   final String title;
   final TextStyle? titleStyle;
   final String? subtitle;

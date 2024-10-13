@@ -11,6 +11,7 @@ class MyTextField extends StatelessWidget {
   final Function(String)? onChanged;
   final TextStyle? hintStyle;
   final TextStyle? labelStyle;
+  final TextInputType? keyboardType;
 
   const MyTextField({
     super.key,
@@ -23,6 +24,7 @@ class MyTextField extends StatelessWidget {
     this.onChanged,
     this.hintStyle,
     this.labelStyle,
+    this.keyboardType,
   });
 
   @override
@@ -40,6 +42,7 @@ class MyTextField extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         TextField(
+          keyboardType: keyboardType,
           cursorColor: Colors.black,
           obscureText: isPassword && !isPasswordVisible,
           onChanged: onChanged,

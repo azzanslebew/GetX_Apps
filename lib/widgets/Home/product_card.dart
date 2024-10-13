@@ -79,7 +79,8 @@ class ProductCard extends StatelessWidget {
               width: double.infinity,
               child: MyButton(
                 onPressed: () {
-                  final CartController cartController = Get.put(CartController());
+                  final CartController cartController =
+                      Get.put(CartController());
                   CartModel cartItem = CartModel(
                     title: title,
                     imageUrl: imageUrl,
@@ -91,6 +92,7 @@ class ProductCard extends StatelessWidget {
                 backgroundColor: Colors.black,
                 category: 'Add to Cart',
                 showIcon: true,
+                showBorder: false,
                 isIconLeft: true,
                 iconSize: 16,
                 icon: Icons.shopping_cart,
