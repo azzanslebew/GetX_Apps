@@ -10,7 +10,7 @@ class CartModel {
       required this.imageUrl,
       required this.price});
 
-  // Metode untuk mengonversi CartModel menjadi Map
+  // Method untuk mengonversi CartModel menjadi Map
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -20,7 +20,7 @@ class CartModel {
     };
   }
 
-  // Metode untuk membuat CartModel dari Map
+  // Method untuk membuat CartModel dari Map
   factory CartModel.fromMap(Map<String, dynamic> map) {
     return CartModel(
       id: map['id'],

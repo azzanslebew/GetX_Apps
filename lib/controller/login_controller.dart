@@ -10,11 +10,17 @@ class LoginController extends GetxController {
   }
 
   void login() {
+    if (email.value.isEmpty || password.value.isEmpty) {
+      Get.snackbar('Error', 'Email or password cannot be empty',
+          duration: 1.seconds);
+      return;
+    }
+
     if (email.value == 'azzan@gmail.com' && password.value == 'azzan123') {
-      Get.snackbar('Success', 'Login successful');
+      Get.snackbar('Success', 'Login successful', duration: 1.seconds);
       Get.offNamed('/home');
     } else {
-      Get.snackbar('Error', 'Incorrect email or password');
+      Get.snackbar('Error', 'Incorrect email or password', duration: 1.seconds);
     }
   }
 }

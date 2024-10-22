@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_apps/controller/cart_controller.dart';
-import 'package:getx_apps/models/cart_model.dart'; // Import CartModel
+import 'package:getx_apps/models/cart_model.dart';
 import 'package:getx_apps/widgets/elevated_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -87,7 +87,8 @@ class ProductCard extends StatelessWidget {
                     price: price,
                   );
                   cartController.addToCart(cartItem);
-                  Get.snackbar('Item Added', '$title has been added to cart.');
+                  Get.snackbar('Item Added', '$title has been added to cart.',
+                      duration: 1.seconds);
                 },
                 backgroundColor: Colors.black,
                 category: 'Add to Cart',

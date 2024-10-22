@@ -12,7 +12,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final CartController cartController = Get.put(CartController());
+    final CartController cartController = Get.find();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const MyAppBar(
@@ -53,33 +53,40 @@ class CartPage extends StatelessWidget {
           itemCount: cartController.cartItems.length,
           itemBuilder: (context, index) {
             var item = cartController.cartItems[index];
-            return MyListTile(
-              leading: Image.asset(item.imageUrl),
-              title: item.title,
-              subtitle: item.price,
-              trailing: IconButton(
-                onPressed: () {
-                  ConfirmationDialog.show(
-                    icon: Icons.delete_outline_rounded,
-                    title: "Delete Item?",
-                    message: "Are you sure you want to delete this item?",
-                    confirmText: "Yes, Delete",
-                    cancelText: "No, Cancel",
-                    onConfirm: () {
-                      cartController.deleteCartItem(item.id!);
-                      Get.back();
-                    },
-                    onCancel: () {
-                      Get.back();
-                    },
-                  );
-                },
-                icon: const Icon(
-                  Icons.delete_rounded,
-                  color: Colors.red,
-                ),
+            return Container(
+              margin: const EdgeInsets.only(left: 20, right: 20, top: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.grey),
               ),
-              onTap: () {},
+              child: MyListTile(
+                leading: Image.asset(item.imageUrl),
+                title: item.title,
+                subtitle: item.price,
+                trailing: IconButton(
+                  onPressed: () {
+                    ConfirmationDialog.show(
+                      icon: Icons.delete_outline_rounded,
+                      title: "Delete Item?",
+                      message: "Are you sure you want to delete this item?",
+                      confirmText: "Yes, Delete",
+                      cancelText: "No, Cancel",
+                      onConfirm: () {
+                        cartController.deleteCartItem(item.id!);
+                        Get.back();
+                      },
+                      onCancel: () {
+                        Get.back();
+                      },
+                    );
+                  },
+                  icon: const Icon(
+                    Icons.delete_rounded,
+                    color: Colors.red,
+                  ),
+                ),
+                onTap: () {},
+              ),
             );
           },
         );
