@@ -4,6 +4,7 @@ import 'package:getx_apps/controller/cart_controller.dart';
 import 'package:getx_apps/controller/category_controller.dart';
 import 'package:getx_apps/controller/explore_controller.dart';
 import 'package:getx_apps/controller/login_controller.dart';
+import 'package:getx_apps/controller/responsive_controller.dart';
 
 class MyBindings extends Bindings {
   @override
@@ -13,5 +14,6 @@ class MyBindings extends Bindings {
     Get.lazyPut<LoginController>(() => LoginController());
     Get.lazyPut<ExploreController>(() => ExploreController());
     Get.lazyPut<CartController>(() => CartController());
+    Get.lazyPut<ResponsiveController>(() => ResponsiveController());
   }
 }

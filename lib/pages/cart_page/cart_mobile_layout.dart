@@ -7,12 +7,12 @@ import 'package:getx_apps/widgets/text.dart';
 import 'package:getx_apps/widgets/list_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CartPage extends StatelessWidget {
-  const CartPage({super.key});
+class CartMobileLayout extends StatelessWidget {
+  const CartMobileLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final CartController cartController = Get.find();
+    final CartController cartController = Get.put(CartController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const MyAppBar(

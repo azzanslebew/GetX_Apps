@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_apps/bindings/bindings.dart';
-import 'package:getx_apps/pages/cart_page.dart';
 import 'package:getx_apps/pages/home_page.dart';
 import 'package:getx_apps/pages/login_page.dart';
 import 'package:getx_apps/pages/welcome_page.dart';
+
+import 'pages/cart_page/cart_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialBinding: MyBindings(),
       initialRoute: '/',
       getPages: [
-        GetPage(name: '/cart', page: () => const CartPage()),
+        GetPage(name: '/cart', page: () => const CartPage()), 
         GetPage(name: '/', page: () => const WelcomePage()),
         GetPage(name: '/login', page: () => const LoginPage()),
         GetPage(

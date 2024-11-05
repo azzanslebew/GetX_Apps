@@ -17,7 +17,7 @@ class LoginController extends GetxController {
     }
 
     if (email.value == 'azzan@gmail.com' && password.value == 'azzan123') {
-      Get.snackbar('Success', 'Login successful', duration: 1.seconds);
+      Get.snackbar('Success', 'Login successful', duration: 2.seconds);
       Get.offNamed('/home');
     } else {
       Get.snackbar('Error', 'Incorrect email or password', duration: 1.seconds);
