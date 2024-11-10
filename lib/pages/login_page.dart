@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final LoginController loginController = Get.find();
+    final LoginController loginController = Get.put(LoginController());
 
     return Scaffold(
       backgroundColor: Colors.white,

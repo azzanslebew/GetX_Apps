@@ -6,11 +6,14 @@ import 'package:getx_apps/widgets/list_tile.dart';
 import 'package:getx_apps/widgets/confirmation_dialog.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../controller/login_controller.dart';
+
 class Account extends StatelessWidget {
   const Account({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final LoginController loginController = Get.find();
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const MyAppBar(
@@ -75,18 +78,18 @@ class Account extends StatelessWidget {
             titleStyle: GoogleFonts.montserrat(color: Colors.red),
             onTap: () {
               ConfirmationDialog.show(
-              icon: Icons.error_outline_rounded, 
-              title: "Logout?",
-              message: "Are you sure you want to logout?",
-              confirmText: "Yes, Logout",
-              cancelText: "No, Cancel",
-              onConfirm: () {
-                Get.offAllNamed('/login');
-              },
-              onCancel: () {
-                Get.back();
-              },
-            );
+                icon: Icons.error_outline_rounded,
+                title: "Logout?",
+                message: "Are you sure you want to logout?",
+                confirmText: "Yes, Logout",
+                cancelText: "No, Cancel",
+                onConfirm: () {
+                  loginController.logout();
+                },
+                onCancel: () {
+                  Get.back();
+                },
+              );
             },
           ),
         ],
